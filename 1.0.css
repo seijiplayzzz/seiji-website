@@ -1,0 +1,297 @@
+  /* CSS Styles for the HTML document */
+
+*, html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 0 0 8px white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 680;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 28px;
+    padding: 25px;
+    transition: 0.25s;
+}
+
+.nav-bar ul li a::after {
+    display: block;
+    content: "";
+    border-bottom: solid 2px white;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out; }
+
+.nav-bar ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Corrected the typo for the "active" class */
+.nav-bar ul li a.active {
+    color: white;
+}
+
+/* Add additional styles for responsive design, hamburger menu, etc. if needed */
+/* CSS Styles for responsive design at max-width: 900px */
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 3px;
+        height: 3px;
+        background: white;
+        margin: 6px 8px;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: black;
+        box-shadow: 0 16px 8px -9px rgba(191, 191, 191, 1);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 458px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        transition: 0.55s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+
+
+
+/* Body Styling */
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+/* Heading 3 */
+h3 {
+  color: white;
+  margin: 10px;
+  font-size: 16px;
+  padding: 20px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+}
+
+/* Heading 4 */
+h4 {
+  color: white;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 8px white;
+  text-align: center;
+}
+
+/* CLASS Styling */
+.txt {
+  font-family: monospace;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 0 0 8px white;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 40px;
+  box-shadow: 0 0 10px white;
+}
+
+.image-container img {
+  height: 170px;
+  width: 300px;
+  border-radius: 40px;
+  border: 1px solid white;
+  box-shadow: 0 0 8px white;
+}
+
+.image-container p {
+  color: white;
+  font-size: 15px;
+  font-family: Fantasy;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.text1 {
+  font-size: 12px;
+}
+
+/* Search container style */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/* Search input style */
+.search-container input[type="text"] {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 200px;
+}
+
+/* Search button style */
+.search-container button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.google {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+/* Logo Styling */
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  border-radius: 100px;
+  box-shadow: 0 0 5px black;
+}
+
+.social img {
+  height: 150px;
+  border-radius: 100px;
+  border: 1px solid white;
+  box-shadow: 0 0 8px white;
+}
+
+.social2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 5px solid black;
+  border-radius: 100px;
+  box-shadow: 0 0 5px black;
+}
+
+.social2 img {
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  border: 1px solid white;
+  box-shadow: 0 0 8px white;
+}
+
+/* ID Styling */
+#scroll {
+  color: red;
+  border: 5px solid black;
+  background-color: black;
+  box-shadow: 0 0 0 black;
+}
+
+#thanks {
+  font-size: 15px;
+  color: white;
+}
+
+#youtubeButton,
+#openAppButton,
+#facebookButton {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 300px;
+  height: 50px;
+  box-shadow: 0 0 10px white;
+  margin: 10px;
+  justify-content: center;
+  border: 1px solid white; 
+  
+}
+
+  
+  
